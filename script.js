@@ -4,7 +4,7 @@
     "à Morangis",
     "à Chilly-Mazarin",
     "en Essonne",
-    "vers Orly, Roissy et Massy TGV",
+    "vers Orly et Roissy",
     "dans toute l’Île-de-France"
   ];
 
