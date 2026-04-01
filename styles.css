@@ -82,7 +82,8 @@ button, input, textarea { font: inherit; }
 
 .btn::after,
 .card::after,
-.stat::after {
+.stat::after,
+.trust-logo::after {
   content: "";
   position: absolute;
   top: -120%;
@@ -104,7 +105,8 @@ button, input, textarea { font: inherit; }
 
 .btn:hover::after,
 .card:hover::after,
-.stat:hover::after {
+.stat:hover::after,
+.trust-logo:hover::after {
   transform: rotate(18deg) translateX(520%);
 }
 
@@ -255,7 +257,8 @@ header {
 .hero-tags,
 .hero-links,
 .cta-inline,
-.breadcrumbs {
+.breadcrumbs,
+.contact-inline {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -385,7 +388,8 @@ header {
 .grid-2,
 .process,
 .contact-grid,
-.areas {
+.areas,
+.trust-grid {
   display: grid;
   gap: 20px;
 }
@@ -397,7 +401,8 @@ header {
 
 .grid-2,
 .areas,
-.contact-grid {
+.contact-grid,
+.trust-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -435,6 +440,71 @@ header {
 .area-list {
   columns: 2;
   gap: 18px;
+}
+
+.trust-logo {
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.trust-logo:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244,181,68,.32);
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+  background: rgba(255,255,255,.06);
+}
+
+.trust-logo img {
+  max-height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+}
+
+.france-map-wrap {
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.france-map-box {
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow);
+}
+
+.france-map-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.contact-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.contact-chip {
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--text);
 }
 
 .step-num {
@@ -624,7 +694,9 @@ footer {
   .process,
   .areas,
   .contact-grid,
-  .form-grid {
+  .form-grid,
+  .trust-grid,
+  .france-map-wrap {
     grid-template-columns: 1fr;
   }
 
@@ -671,14 +743,16 @@ footer {
 
   .cta-inline,
   .hero-links,
-  .form-actions {
+  .form-actions,
+  .contact-inline {
     display: grid;
     grid-template-columns: 1fr;
   }
 
   .cta-inline .btn,
   .hero-links .pill,
-  .form-actions .btn {
+  .form-actions .btn,
+  .contact-inline .btn {
     width: 100%;
   }
 
